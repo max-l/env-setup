@@ -45,8 +45,8 @@ echo "Installing to $installDir"
 git clone git@github.com:max-l/env-setup.git
 
 echo "setting global plugins in ~/.sbt/plugins/plugins.sbt, will back up in ~/.sbt/plugins/plugins.sbt.bak"
-cp ~/.sbt/plugins/plugins.sbt ~/.sbt/plugins/plugins.sbt.bak
-cp env-setup ~/.sbt/plugins/plugins.sbt
+#cp ~/.sbt/plugins/plugins.sbt ~/.sbt/plugins/plugins.sbt.bak
+cp ./env-setup/plugins.sbt ~/.sbt/plugins/plugins.sbt
 
 git clone git@github.com:max-l/sl-core.git
 git clone git@github.com:max-l/sl-tools.git
