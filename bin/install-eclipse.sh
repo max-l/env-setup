@@ -7,17 +7,19 @@ scalaIDEFile="org.scala-ide.sdt.update-site-2.0.0-RC4.zip"
 
 ##########################################################################
 
+echo "will install eclipse, be patient !"
+
 set -e
 
 ECLIPSE_INSTALL_DIR=$STRONGLINKS_SANDBOX_DIR
 
-curl -s -o "$eclipseFile" "http://mirror.csclub.uwaterloo.ca/eclipse/eclipse/downloads/drops/R-3.7.1-201109091335/$eclipseFile"
+curl -o "$eclipseFile" "http://mirror.csclub.uwaterloo.ca/eclipse/eclipse/downloads/drops/R-3.7.1-201109091335/$eclipseFile"
 
 unzip -x "$eclipseFile"
 	
 echo "downloading ScalaIDE"
 	
-curl -s -o "$scalaIDEFile" -O http://cloud.github.com/downloads/max-l/env-setup/"$scalaIDEFile"
+curl -o "$scalaIDEFile" -O http://cloud.github.com/downloads/max-l/env-setup/"$scalaIDEFile"
 
 unzip -x -d "scala-ide" "$scalaIDEFile"
 
