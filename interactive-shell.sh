@@ -3,6 +3,7 @@ export STRONGLINKS_SANDBOX_DIR=`pwd`
 
 export PATH="$STRONGLINKS_SANDBOX_DIR/home/bin:$PATH"
 
+export IVY_HOME=$STRONGLINKS_SANDBOX_DIR/home/.ivy2
 
 SSH_ENV="$HOME/.ssh/environment"
 

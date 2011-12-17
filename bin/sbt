@@ -1,0 +1,1 @@
+java -Xmx512M -Dsbt.ivy.home=$IVY_HOME -jar $STRONGLINKS_SANDBOX_DIR/home/bin/sbt-launch.jar "$@"
