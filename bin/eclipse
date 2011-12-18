@@ -1,0 +1,15 @@
+#!/bin/bash
+
+PROJECTS_DIR=$STRONGLINKS_SANDBOX_DIR/git-projects
+
+
+function genProject {
+
+  cd $PROJECTS_DIR/$1
+  sbt "eclipse skip-root $2"
+}
+
+genProject sl-core ""
+genProject sl-tools ""
+genProject scalaforms with-sources
+genProject scalaforms-demo ""
