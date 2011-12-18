@@ -1,1 +1,1 @@
-java -Xmx512M -Dsbt.ivy.home=$IVY_HOME -Dsbt.global.base= -jar $STRONGLINKS_SANDBOX_DIR/home/bin/sbt-launch.jar "$@"
+java -Xmx512M -Dsbt.ivy.home=$IVY_HOME -Dsbt.global.base=$SBT_HOME -jar $STRONGLINKS_SANDBOX_DIR/home/bin/sbt-launch.jar "$@"
