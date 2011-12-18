@@ -5,6 +5,8 @@ export PATH="$STRONGLINKS_SANDBOX_DIR/home/bin:$PATH"
 
 export IVY_HOME=$STRONGLINKS_SANDBOX_DIR/home/.ivy2
 
+export SBT_HOME=$STRONGLINKS_SANDBOX_DIR/home/.sbt
+
 SSH_ENV="$HOME/.ssh/environment"
 
 # start the ssh-agent
