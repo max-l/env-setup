@@ -1,1 +1,5 @@
-java -Xmx512M -Dsbt.ivy.home=$IVY_HOME -Dsbt.global.base=$SBT_HOME -jar $STRONGLINKS_SANDBOX_DIR/home/bin/sbt-launch.jar "$@"
+sbtOpts="-Xmx512M -Dfile.encoding=UTF8 -Dsbt.ivy.home=$IVY_HOME -Dsbt.global.base=$SBT_HOME"
+echo "SBT options : $sbtOpts"
+java $sbtOpts -jar $STRONGLINKS_SANDBOX_DIR/home/bin/sbt-launch.jar "$@"
+
+#java -Xmx512M -Dfile.encoding=UTF8 -Dsbt.ivy.home=$IVY_HOME -Dsbt.global.base=$SBT_HOME  -jar $STRONGLINKS_SANDBOX_DIR/home/bin/sbt-launch.jar "$@"
