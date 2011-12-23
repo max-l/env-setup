@@ -1,5 +1,8 @@
 
-export STRONGLINKS_SANDBOX_DIR=`pwd`
+
+echo "Sandbox : $STRONGLINKS_SANDBOX_DIR"
+echo "available commands are : "
+ls "$STRONGLINKS_SANDBOX_DIR/home/bin"
 
 export PATH="$STRONGLINKS_SANDBOX_DIR/home/bin:$PATH"
 
