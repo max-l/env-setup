@@ -14,6 +14,7 @@ then
   
   echo "export STRONGLINKS_SANDBOX_DIR=$SANDBOX_DIR" > home/bin/interactive-shell.sh
   cat home/bin/interactive-shell.template >> home/bin/interactive-shell.sh
+  rm home/bin/interactive-shell.template
 fi
 
 home/bin/interactive-shell.sh
