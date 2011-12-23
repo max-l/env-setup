@@ -1,7 +1,8 @@
-
 echo "===================== Sandbox : $STRONGLINKS_SANDBOX_DIR ================"
 echo "available commands are : "
-ls -1 "$STRONGLINKS_SANDBOX_DIR/home/bin"
+echo " "
+ls home/bin/ | grep -v ".*\.template" | grep -v ".*\.jar" | grep -v "interactive-shell.sh"
+echo " "
 echo "========================================================================="
 
 export PATH="$STRONGLINKS_SANDBOX_DIR/home/bin:$PATH"
