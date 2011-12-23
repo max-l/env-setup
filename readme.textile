@@ -1,16 +1,20 @@
 h2. Windows Setup
 
-# "Git for Windows":http://msysgit.googlecode.com/files/Git-1.7.8-preview20111206.exe   installation : http://help.github.com/win-set-up-git/ configuration for avoiding password prompt : http://help.github.com/ssh-key-passphrases/ ssh-agent must be enabled (Auto-launching ssh-agent on msysgit) for the setup script to run properly
+h3. 1) "Git for Windows":http://msysgit.googlecode.com/files/Git-1.7.8-preview20111206.exe   
 
-# "JDK 1.6":http://www.oracle.com/technetwork/java/javase/downloads/jdk-6u30-download-1377139.html
+installation : http://help.github.com/win-set-up-git/ configuration for avoiding password prompt : http://help.github.com/ssh-key-passphrases/ ssh-agent must be enabled (Auto-launching ssh-agent on msysgit) for the setup script to run properly
+
+h3. 2) "JDK 1.6":http://www.oracle.com/technetwork/java/javase/downloads/jdk-6u30-download-1377139.html
   
-# set JAVA_HOME in ~/.bashrc (*windows style mandatory*, ex: d:\x\y\jdk16)
+h3. 3)  set JAVA_HOME in ~/.bashrc (*windows style mandatory*, ex: d:\x\y\jdk16)
 
 
-# Fetch the script and run
+h3. 4) Fetch the script and run
 
-
-=================================================================
 
 curl -o origin.sh https://raw.github.com/max-l/env-setup/master/origin.sh
 
+./origin.sh
+
+This will create a sandbox in the current directory, available commands are in 
+ls ./home/bin
