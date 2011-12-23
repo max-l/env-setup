@@ -1,7 +1,7 @@
 echo "===================== Sandbox : $STRONGLINKS_SANDBOX_DIR ================"
 echo "available commands are : "
 echo " "
-ls home/bin/ | grep -v ".*\.template" | grep -v ".*\.jar" | grep -v "interactive-shell.sh"
+ls home/bin/ | grep -v ".*\.jar" | grep -v "interactive-shell.sh"
 echo " "
 echo "========================================================================="
 
