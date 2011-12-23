@@ -12,4 +12,4 @@ cloneProject sl-core
 cloneProject sl-tools
 cloneProject scalaforms
 cloneProject scalaforms-demo
-
+cloneProject env-setup
