@@ -3,28 +3,45 @@
 ##########################################################################
 
 eclipseFile="eclipse-SDK-3.7.1-win32-x86_64.zip"
-scalaIDEFile="org.scala-ide.sdt.update-site-2.0.0-RC4.zip"
+scalaIDEFile="org.scala-ide.sdt.update-site-2.0.0.zip"
 
 ##########################################################################
 
-echo "will install eclipse, be patient !"
+echo "will install eclipse"
 
 set -e
 
 ECLIPSE_INSTALL_DIR=$STRONGLINKS_SANDBOX_DIR
 
-curl -o "$eclipseFile" "http://mirror.csclub.uwaterloo.ca/eclipse/eclipse/downloads/drops/R-3.7.1-201109091335/$eclipseFile"
+ECLIPSE_CACHE_DIR=`cd ~; pwd`
 
-unzip -x "$eclipseFile"
-	
-echo "downloading ScalaIDE"
-	
-curl -o "$scalaIDEFile" -O http://cloud.github.com/downloads/max-l/env-setup/"$scalaIDEFile"
+if [ ! -e "$ECLIPSE_CACHE_DIR/.strong-link-cache" ]
+then
+  mkdir $ECLIPSE_CACHE_DIR/.strong-link-cache
+fi
 
-unzip -x -d "scala-ide" "$scalaIDEFile"
+ECLIPSE_CACHE_DIR=$ECLIPSE_CACHE_DIR/.strong-link-cache
+
+if [ ! -e "$ECLIPSE_CACHE_DIR/$eclipseFile" ]
+then
+  echo "will download eclipse, be patient !"
+  curl -o "$ECLIPSE_CACHE_DIR/$eclipseFile" "http://mirror.csclub.uwaterloo.ca/eclipse/eclipse/downloads/drops/R-3.7.1-201109091335/$eclipseFile"
+fi
+
+unzip -xq "$ECLIPSE_CACHE_DIR/$eclipseFile"
+
+if [ ! -e "$ECLIPSE_CACHE_DIR/$scalaIDEFile" ]
+then
+  echo "will download Scala-Ide"
+  curl -o "$ECLIPSE_CACHE_DIR/$scalaIDEFile" -O http://cloud.github.com/downloads/max-l/env-setup/"$scalaIDEFile"  
+fi
+
+unzip -xq -d "scala-ide" "$ECLIPSE_CACHE_DIR/$scalaIDEFile"
 
 cp scala-ide/features/* eclipse/features
 cp scala-ide/plugins/* eclipse/plugins
+
+rm -Rf scala-ide
 
 eclipse_ini="eclipse/eclipse.ini"
 
@@ -46,4 +63,4 @@ echo "-vmargs" >> "$eclipse_ini"
 echo "-Xms256m" >> "$eclipse_ini"
 echo "-Xmx1024m" >> "$eclipse_ini"
 
-echo "installation of $scalaIDEFile into $eclipseFile successful."
+echo "installed eclipse with Scala IDE into ./eclipse"
