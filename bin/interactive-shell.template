@@ -1,8 +1,9 @@
 
 
-echo "Sandbox : $STRONGLINKS_SANDBOX_DIR"
+echo "===================== Sandbox : $STRONGLINKS_SANDBOX_DIR ================"
 echo "available commands are : "
-ls "$STRONGLINKS_SANDBOX_DIR/home/bin"
+ls -l "$STRONGLINKS_SANDBOX_DIR/home/bin"
+echo "========================================================================="
 
 export PATH="$STRONGLINKS_SANDBOX_DIR/home/bin:$PATH"
 
