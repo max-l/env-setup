@@ -8,4 +8,4 @@ then
   curl -s -o `pwd`/home/bin/sbt-launch.jar "http://repo.typesafe.com/typesafe/ivy-releases/org.scala-tools.sbt/sbt-launch/$sbtVersion/sbt-launch.jar"
 fi
 
-home/interactive-shell.sh
+home/bin/interactive-shell.sh
