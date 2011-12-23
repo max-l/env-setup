@@ -16,5 +16,6 @@ curl -o origin.sh https://raw.github.com/max-l/env-setup/master/origin.sh
 
 ./origin.sh
 
-This will create a sandbox in the current directory, available commands are in 
-ls ./home/bin
+This will create a sandbox in the current directory, the origin.sh script is meant
+to be used for working in this sandbox, it overrides SBT's Ivy home, .sbt home
+in a way that each sandbox is completely isolated from others.
