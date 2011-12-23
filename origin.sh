@@ -8,7 +8,7 @@ then
   echo Will create a sandbox in "$SANDBOX_DIR"
 
   sbtVersion="0.11.2"
-  git clone --quiet git@github.com:max-l/env-setup.git home
+  git clone --quiet depth 1 git@github.com:max-l/env-setup.git home
   rm -Rf home/.git
   curl -s -o $SANDBOX_DIR/home/bin/sbt-launch.jar "http://repo.typesafe.com/typesafe/ivy-releases/org.scala-tools.sbt/sbt-launch/$sbtVersion/sbt-launch.jar"
   
