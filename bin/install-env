@@ -5,7 +5,7 @@ PROJECT_DIRS=$STRONGLINKS_SANDBOX_DIR/git-projects
 
 function cloneProject {
   git clone --quiet git@github.com:max-l/$1.git $PROJECT_DIRS/$1
-  echo "will cloned $1 into $PROJECT_DIRS/$1"
+  echo "Cloned $1 into $PROJECT_DIRS/$1."
 }
 
 cloneProject sl-core
