@@ -11,5 +11,5 @@ function genProject {
 
 genProject sl-core ""
 genProject sl-tools ""
-genProject scalaforms with-source=true
+genProject scalaforms ""
 genProject scalaforms-demo ""
