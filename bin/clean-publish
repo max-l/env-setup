@@ -5,7 +5,7 @@ PROJECT_DIRS=$STRONGLINKS_SANDBOX_DIR/git-projects
 
 function doIt {
   cd $PROJECT_DIRS/$1
-  sbt publish-local
+  sbt clean publish-local
 }
 
 doIt sl-core

@@ -4,12 +4,11 @@ PROJECTS_DIR=$STRONGLINKS_SANDBOX_DIR/git-projects
 
 
 function genProject {
-
   cd $PROJECTS_DIR/$1
-  sbt "eclipse $2"
+  sbt eclipse
 }
 
-genProject sl-core ""
-genProject sl-tools ""
-genProject scalaforms ""
-genProject scalaforms-demo ""
+genProject sl-core
+genProject sl-tools
+genProject scalaforms
+genProject scalaforms-demo
