@@ -7,6 +7,7 @@ installation : http://help.github.com/win-set-up-git/ configuration for avoiding
 h3. 2) "JDK 1.6":http://www.oracle.com/technetwork/java/javase/downloads/jdk-6u30-download-1377139.html
   
 h3. 3)  set JAVA_HOME in ~/.bashrc (*windows style mandatory*, ex: d:\x\y\jdk16)
+        set PATH=$JAVA_HOME/bin:$PATH
 
 
 h3. 4) Fetch the script and run
