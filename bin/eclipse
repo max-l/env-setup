@@ -11,4 +11,4 @@ function genProject {
 genProject sl-core
 genProject sl-tools
 genProject scalaforms
-genProject scalaforms-demo
+genProject decision-hub
