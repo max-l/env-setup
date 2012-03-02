@@ -11,5 +11,5 @@ function cloneProject {
 cloneProject sl-core
 cloneProject sl-tools
 cloneProject scalaforms
-cloneProject scalaforms-demo
+cloneProject decision-hub
 cloneProject env-setup
