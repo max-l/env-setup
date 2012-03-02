@@ -11,5 +11,5 @@ function doIt {
 doIt sl-core
 doIt sl-tools
 doIt scalaforms
-doIt decision_hub
+doIt decision-hub
 
