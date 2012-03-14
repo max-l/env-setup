@@ -12,3 +12,5 @@ EclipseKeys.createSrc <<= ((sourceGenerators in Compile) { sourgeGens =>
 logLevel in Global := Level.Warn
 
 publishArtifact in packageDoc := false
+
+scalacOptions ++= Seq("-unchecked", "-deprecation")
